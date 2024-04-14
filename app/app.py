@@ -53,7 +53,7 @@ with ui.sidebar(title="Filter controls",style="background-color: #e0ffff"):
     )
     ui.a(
         "GitHub App",
-        href="https://github.com/Priyankanaskar/cintel-07-tdash",
+        href="https://priyankanaskar.github.io/cintel-07-tdash/",
         target="_blank",
     )
 
@@ -101,7 +101,7 @@ with ui.layout_column_wrap(fill=False):
 
 
 with ui.layout_columns():
-    with ui.card(full_screen=True):
+    with ui.card(full_screen=True,):
         ui.card_header("Bill length and depth")
 
         @render.plot
@@ -127,6 +127,20 @@ with ui.layout_columns():
             ]
             return render.DataGrid(filtered_df()[cols], filters=True)
 
+# Card view for visualization---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+from shiny import App, ui
+
+app_ui = ui.page_fillable(
+    ui.layout_column_wrap(  
+        ui.card("Card 1"),
+        ui.card("Card 2"),
+        ui.card("Card 3"),
+        ui.card("Card 4"),
+       width="2px",
+        length="2px"
+    ),
+)
 
 #ui.include_css(app_dir / "styles.css")
 
