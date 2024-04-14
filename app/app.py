@@ -7,10 +7,35 @@ import palmerpenguins
 
 df = palmerpenguins.load_penguins()
 
-ui.page_opts(title="Penguins dashboard", fillable=True)
+ui.page_opts(title="Priyanka's Penguin Dashboard ")
 
+# Original UI layout and style setup
+ui.HTML(
+    """
+  <style>
+  body {
+    background-color: #ADD8E6;
+    color: #333; 
+    font-family: Arial-bold, gothic;
+    font-size: 16px; 
+    font-weight: normal; 
+    font-style: bold; 
+    text-decoration: none; 
+    text-transform: none; 
+    line-height: 1.5; 
+    letter-spacing: normal;
+  }
+  /* Add border style to headers 
+  h1, h2, h3, h4, h5, h6 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px; 
+    margin-bottom: 10px; 
+  }
+  </style>
+"""
+)
 
-with ui.sidebar(title="Filter controls"):
+with ui.sidebar(title="Filter controls",style="background-color: #e0ffff"):
     ui.input_slider("mass", "Mass", 2000, 6000, 6000)
     ui.input_checkbox_group(
         "species",
@@ -22,20 +47,23 @@ with ui.sidebar(title="Filter controls"):
     ui.h6("Links")
     ui.a(
         "GitHub Source",
-        href="https://github.com/denisecase/cintel-07-tdash",
+        href="https://github.com/Priyankanaskar/cintel-07-tdash",
         target="_blank",
     )
     ui.a(
         "GitHub App",
-        href="https://denisecase.github.io/cintel-07-tdash/",
+        href="https://github.com/Priyankanaskar/cintel-07-tdash",
         target="_blank",
     )
+
     ui.a(
         "GitHub Issues",
-        href="https://github.com/denisecase/cintel-07-tdash/issues",
+        href="https://github.com/Priyankanaskar/cintel-07-tdash/issues",
         target="_blank",
     )
+
     ui.a("PyShiny", href="https://shiny.posit.co/py/", target="_blank")
+
     ui.a(
         "Template: Basic Dashboard",
         href="https://shiny.posit.co/py/templates/dashboard/",
@@ -43,27 +71,27 @@ with ui.sidebar(title="Filter controls"):
     )
     ui.a(
         "See also",
-        href="https://github.com/denisecase/pyshiny-penguins-dashboard-express",
+        href="https://priyankanaskar.github.io/cintel-07-tdash/",
         target="_blank",
     )
 
 
 with ui.layout_column_wrap(fill=False):
-    with ui.value_box(showcase=icon_svg("earlybirds")):
+    with ui.value_box(showcase=icon_svg("earlybirds"),theme="bg-gradient-blue-red"):
         "Number of penguins"
 
         @render.text
         def count():
             return filtered_df().shape[0]
 
-    with ui.value_box(showcase=icon_svg("ruler-horizontal")):
+    with ui.value_box(showcase=icon_svg("ruler-horizontal"),theme="bg-gradient-blue-red"):
         "Average bill length"
 
         @render.text
         def bill_length():
             return f"{filtered_df()['bill_length_mm'].mean():.1f} mm"
 
-    with ui.value_box(showcase=icon_svg("ruler-vertical")):
+    with ui.value_box(showcase=icon_svg("ruler-vertical"),theme="bg-gradient-blue-red"):
         "Average bill depth"
 
         @render.text
@@ -85,7 +113,7 @@ with ui.layout_columns():
             )
 
     with ui.card(full_screen=True):
-        ui.card_header("Penguin da")
+        ui.card_header("Penguin data ")
 
         @render.data_frame
         def summary_statistics():
