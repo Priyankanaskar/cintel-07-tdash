@@ -9,6 +9,7 @@ df = palmerpenguins.load_penguins()
 
 ui.page_opts(title="Priyanka's Penguin Dashboard ")
 
+
 # Original UI layout and style setup
 ui.HTML(
     """
