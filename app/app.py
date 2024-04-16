@@ -1,6 +1,5 @@
 import seaborn as sns
-from faicons import icon_svg
-
+from faicons import icon_svg 
 from shiny import reactive
 from shiny.express import input, render, ui
 import palmerpenguins 
@@ -8,8 +7,11 @@ import palmerpenguins
 df = palmerpenguins.load_penguins()
 
 ui.page_opts(title="Priyanka's Penguin Dashboard ")
-
-
+ui.input_date("date", "Date")
+def value():
+    return input.date()
+  
+   
 # Original UI layout and style setup
 ui.HTML(
     """
@@ -76,7 +78,6 @@ with ui.sidebar(title="Filter controls",style="background-color: #e0ffff"):
         target="_blank",
     )
 
-
 with ui.layout_column_wrap(fill=False):
     with ui.value_box(showcase=icon_svg("earlybirds"),theme="bg-gradient-blue-red"):
         "Number of penguins"
@@ -127,6 +128,36 @@ with ui.layout_columns():
             ]
             return render.DataGrid(filtered_df()[cols], filters=True)
 
+penguins = sns.load_dataset("penguins")
+ui.input_select("x", "Variable:",
+                choices=["bill_length_mm", "bill_depth_mm"])
+ui.input_select("dist", "Distribution:", choices=["hist", "kde"])
+ui.input_checkbox("rug", "Show rug marks", value = False)
+@render.plot
+def displot():
+    sns.displot(
+        data=penguins, hue="species", multiple="stack",
+        x=input.x(), rug=input.rug(), kind=input.dist())
+
+ui.hr()
+ui.input_action_button("show", "Explore")
+@reactive.effect
+@reactive.event(input.show)
+def show_important_message():
+    m = ui.modal(  
+        "If you want to explore More Plot Please https://shiny.posit.co/py/templates/",  
+        easy_close=True,  
+        footer=None,  
+    )  
+    ui.modal_show(m)
+
+ui.hr()
+
+ui.input_text("Text", "Project Created By Priyanka",)
+
+@render.text(inline=True)  
+def text():
+    return input.Text()
 
 #ui.include_css(app_dir / "styles.css")
 
