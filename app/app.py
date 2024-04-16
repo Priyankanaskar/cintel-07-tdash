@@ -11,7 +11,7 @@ ui.input_date("date", "Date")
 def value():
     return input.date()
   
-   
+
 # Original UI layout and style setup
 ui.HTML(
     """

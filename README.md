@@ -28,7 +28,7 @@ IMPORTANT: Use your GitHub **username** in place of denisecase.
 [GitHub CLI](https://cli.github.com/) may work better on some machines.
 
 ```shell
-git clone https://github.com/denisecase/cintel-07-tdash
+git clone https://github.com/Priyankanaskar/cintel-07-tdash
 ```
 
 ## Run Locally - Initial Start
