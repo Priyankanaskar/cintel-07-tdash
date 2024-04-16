@@ -128,7 +128,7 @@ with ui.layout_columns():
             ]
             return render.DataGrid(filtered_df()[cols], filters=True)
 
-<<<<<<< HEAD
+
 penguins = sns.load_dataset("penguins")
 ui.input_select("x", "Variable:",
                 choices=["bill_length_mm", "bill_depth_mm"])
@@ -159,7 +159,7 @@ ui.input_text("Text", "Project Created By Priyanka",)
 @render.text(inline=True)  
 def text():
     return input.Text()
-=======
+
 # Card view for visualization---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 from shiny import App, ui
@@ -174,7 +174,7 @@ app_ui = ui.page_fillable(
         length="2px"
     ),
 )
->>>>>>> bb8f96a3831050c9fddf11a3f8c4ce5d48bb5096
+
 
 #ui.include_css(app_dir / "styles.css")
 
