@@ -1,14 +1,48 @@
-# PyShiny Basic Dashboard (Penguins)
+## PyShiny Basic Dashboard (Penguins)
 
 # Introduction
 
 This Project Is baseed on Python Application with Shiny Layout Application
 
 **Author**
-This Project is C
+This Project is created by Priyanka Naskar Under Guidence OF **Dr.Case**.
 
-**Project Drescription**
-This 
+ **Date** 
+4/17/2024
+
+## PyShiny Express: Palmer Penguins Dashboard 
+
+**Repository: pyshiny-penguins-dashboard-express** 
+
+**Live App: Penguins Dashboard (Express)**
+
+Run and publish interactive apps using PyShiny Express and GitHub Pages.
+
+This is a teaching version of the app written for clarity and understanding. To contribute, please fork the repository and submit a pull request.
+
+# Data Description
+This app uses the Palmer Penguins dataset which includes three penguin species observed on three islands in the Palmer Archipelago, Antarctica. The data has been made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
+
+*Column names for the penguins dataset include:*
+
+* .species: penguin species (Chinstrap, Adelie, or Gentoo)
+* .island: island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago
+* .bill_length_mm: length of the bill in millimeters
+* .bill_depth_mm: depth of the bill in millimeters
+* .flipper_length_mm: length of the flipper in millimeters
+* .body_mass_g: body mass in grams
+* .sex: MALE or FEMALE
+
+**See: https://allisonhorst.github.io/palmerpenguins/**
+
+* Data Cleaning and Transformation
+
+The data includes some missing values. We generally clean the data by removing rows with missing values and possibly transform the data to use columns that are more easily read (or use labels on charts and tables).
+
+* Source:
+
+From https://shiny.posit.co/py/docs/user-interfaces.html. This version has been modified slightly for hosting with GitHub Pages.
+
 ## Tools
 
 - Python
@@ -39,6 +73,17 @@ IMPORTANT: Use your GitHub **username** in place of denisecase.
 ```shell
 git clone https://github.com/Priyankanaskar/cintel-07-tdash
 ```
+## Publish the App with GitHub Pages (one-time setup)
+
+The first time you set up an app, you'll need to navigate to the repository on GitHub and configure the settings to publish the app with GitHub Pages. After configuring the repository once, each time you push changes to the main branch, the app will automatically update.
+
+
+1. Go to the repository on GitHub and navigate to the Settings tab.
+2. Scroll down and click the Pages section.
+3. Select branch main as the source for the site.
+4. Change from the root folder to the docs folder to publish from.
+5. Click Save and wait for the site to build.
+6. Edit the "About" section of the repository to include a link to the live app.
 
 ## Run Locally - Initial Start
 
@@ -108,3 +153,18 @@ git push -u origin main
 
 Go to your GitHub repo settings and enable GitHub Pages for the docs folder.
 
+## Resources
+
+Example csv data from penguins.csv. Used for review only. In the app, we import the data from the palmerpenguins package.
+
+* Palmer Penguins published in:
+
+Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. https://allisonhorst.github.io/palmerpenguins/. doi: 10.5281/zenodo.3960218.
+Data originally published in:
+
+Gorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081
+The Shiny development team. Shiny for Python [Computer software]. https://github.com/posit-dev/py-shiny
+
+## Contributing
+
+**Special Thanks to Dr.Case for guidence and controbution on this project.**
