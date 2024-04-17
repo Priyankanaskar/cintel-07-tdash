@@ -154,7 +154,7 @@ def show_important_message():
 
 ui.hr()
 
-ui.input_text("Text", "Project Created By Priyanka",)
+ui.input_text("Text", "Project Created By Priyanka")
 
 @render.text(inline=True)  
 def text():

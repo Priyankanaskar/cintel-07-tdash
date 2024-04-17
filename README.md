@@ -1,5 +1,14 @@
 # PyShiny Basic Dashboard (Penguins)
 
+# Introduction
+
+This Project Is baseed on Python Application with Shiny Layout Application
+
+**Author**
+This Project is C
+
+**Project Drescription**
+This 
 ## Tools
 
 - Python
@@ -55,7 +64,7 @@ Open a terminal (VS Code menu "View" / "Terminal") in the root project folder an
 shiny run --reload --launch-browser app/app.py
 ```
 
-Open a browser to <http://127.0.0.1:8000/> and test the app.
+Open a browser to (http://localhost:63123/) and test the app.
 
 ## Run Locally - Subsequent Starts
 
@@ -83,7 +92,7 @@ shinylive export app docs
 py -m http.server --directory docs --bind localhost 8008
 ```
 
-Open a browser to <http://[::1]:8008/> and test the Pages app.
+Open a browser to (http://localhost:63123/) and test the Pages app.
 
 ## Push Changes back to GitHub
 
