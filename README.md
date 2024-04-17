@@ -109,7 +109,7 @@ Open a terminal (VS Code menu "View" / "Terminal") in the root project folder an
 shiny run --reload --launch-browser app/app.py
 ```
 
-Open a browser to http://[::1]:8008/ and test the app.
+Open a browser to local host (http://[::1]:8008/) and test the app.
 
 ## Run Locally - Subsequent Starts
 
