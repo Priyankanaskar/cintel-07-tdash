@@ -25,13 +25,13 @@ This app uses the Palmer Penguins dataset which includes three penguin species o
 
 *Column names for the penguins dataset include:*
 
-* .species: penguin species (Chinstrap, Adelie, or Gentoo)
-* .island: island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago
-* .bill_length_mm: length of the bill in millimeters
-* .bill_depth_mm: depth of the bill in millimeters
-* .flipper_length_mm: length of the flipper in millimeters
-* .body_mass_g: body mass in grams
-* .sex: MALE or FEMALE
+*  species: penguin species (Chinstrap, Adelie, or Gentoo)
+*  island: island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago
+*  bill_length_mm: length of the bill in millimeters
+*  bill_depth_mm: depth of the bill in millimeters
+*  flipper_length_mm: length of the flipper in millimeters
+*  body_mass_g: body mass in grams
+*  sex: MALE or FEMALE
 
 **See: https://allisonhorst.github.io/palmerpenguins/**
 
