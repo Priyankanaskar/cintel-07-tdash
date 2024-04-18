@@ -110,6 +110,7 @@ shiny run --reload --launch-browser app/app.py
 ```
 
  Open a browser to http://127.0.0.1:8000/ and test the app. and test the app.
+ 
 
 ## Run Locally - Subsequent Starts
 
