@@ -1,8 +1,12 @@
 import seaborn as sns
 from faicons import icon_svg 
-from shiny import reactive
+from shiny import reactive 
 from shiny.express import input, render, ui
 import palmerpenguins 
+from shiny import App, ui, render
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 df = palmerpenguins.load_penguins()
 
@@ -164,7 +168,7 @@ def text():
 
 from shiny import App, ui
 
-app_ui = ui.page_fillable(
+ app_ui = ui.page_fillable(
     ui.layout_column_wrap(  
         ui.card("Card 1"),
         ui.card("Card 2"),
